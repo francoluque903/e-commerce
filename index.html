@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL CLOTHES - Tienda de Ropa</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Desplazamiento hacia abajo
+                document.getElementById("header").classList.add("header-hidden");
+            } else {
+                // Desplazamiento hacia arriba
+                document.getElementById("header").classList.remove("header-hidden");
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para manejar el desplazamiento hacia arriba al llegar al principio de la página
+        });
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            console.log("Se ha desplazado la página");
+            // Resto del código aquí
+        });
+
+    </script>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logoclothes.png" alt="FL SHOP">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#cuenta">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="nuevos-productos">
+            <h2>Recibe información sobre nuevos productos</h2>
+            <p>Suscríbete para recibir notificaciones sobre nuevos productos lanzados vía correo electrónico.</p>
+            <form action="procesar_suscripcion.php" method="post">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+    <main>
+        <section id="jeans" class="category">
+            <h2>Jeans</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="img/pantalonzara.jpg" alt="Jean 1">
+                    <h3>Jean Crema</h3>
+                    <p>Precio: $45.000</p>
+                    <p>3 cuotas sin interes de $15.000</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="img/jeanclaro.jpg" alt="Jean 2">
+                    <h3>Jean Claro</h3>
+                    <p>Precio: $42.000</p>
+                    <p>3 cuotas sin interes de $14.000</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+
+                    </select>
+                </div>
+                <!-- Agregar más productos según sea necesario -->
+            </div>
+        </section>
+
+        <section id="buzos" class="category">
+            <h2>Buzos</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="img/buzogris.jpg" alt="Buzo 1">
+                    <h3>Buzo Gris</h3>
+                    <p>Precio: $28.000</p>
+                    <p>3 cuotas sin interes de $9.333</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="img/buzo blanco.jpg" alt="Buzo 2">
+                    <h3>Buzo Blacnco</h3>
+                    <p>Precio: $25.000</p>
+                    <p>3 cuotas sin interes de $8.333</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+                <!-- Agregar más productos según sea necesario -->
+            </div>
+        </section>
+
+        <section id="camisetas" class="category">
+            <h2>Camisetas</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="img/remerazara.jpg" alt="Camiseta 1">
+                    <h3>Camiseta Blanca</h3>
+                    <p>Precio: $18.000</p>
+                    <p>3 cuotas sin interes de $6.000</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="img/remera negra.jpg" alt="Camiseta 2">
+                    <h3>Camiseta Negra</h3>
+                    <p>Precio: $17.000</p>
+                    <p>3 cuotas sin interes de $5.666</p>
+                    <label for="talle">Selecciona el Talle:</label>
+                    <select id="talle" name="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+                <!-- Agregar más productos según sea necesario -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Síguenos en <a href="https://www.instagram.com/indumentaria.zarateFL/">Instagram</a> @indumentaria.zarateFL
+        </p>
+        <p><a href="#contacto">Contacto</a> | <a href="#ayuda">Ayuda</a> | <a href="#mayoristas">Mayoristas</a> | <a
+                href="#cambios-devoluciones">Cambios y Devoluciones</a></p>
+
+    </footer>
+</body>
+
+</html>

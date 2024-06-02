@@ -1,0 +1,202 @@
+body {
+    padding-bottom: 30px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #ff4081;
+    color: #fff;
+    padding: 10px 20px; /* Reducir el padding para hacerlo más compacto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Cambiar de 'fixed' a 'sticky' */
+    top: 0;
+    z-index: 1000;
+    #header {
+        transition: top 0.3s; /* Agregar una transición suave */
+    }
+    .header-hidden {
+        top: -70px; /* Ocultar el header moviéndolo hacia arriba */
+    }
+    
+}
+
+.logo {
+    font-size: 20px; /* Reducir el tamaño de la fuente del logo */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px; /* Reducir el espacio entre elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px; /* Reducir el tamaño de la fuente del enlace */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+main {
+    margin-bottom: 60px; 
+    padding-top: 70px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Estilos de productos */
+/* Estilos de productos */
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 200px; /* Ancho máximo deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Añadir espacio entre la imagen y el texto */
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product p {
+    color: #666;
+}
+
+.product button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #d81b60;
+}
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px; /* Reducir el padding para hacerlo más compacto */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+footer nav {
+    margin-bottom: 5px; /* Reducir el espacio entre el menú y el texto */
+}
+
+footer p {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    margin-bottom: 5px; /* Reducir el espacio entre el texto y el borde */
+}
+
+footer p a {
+    color: #ff4081; /* Cambiar el color del enlace */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+footer p a:hover {
+    text-decoration: underline; /* Subrayar en hover */
+}
+main {
+    padding-top: 70px; /* Ajustar el espacio superior para evitar que se superponga con el header */
+}#nuevos-productos {
+    text-align: center;
+    margin-bottom: 20px; /* Ajusta el espacio entre esta sección y el contenido siguiente */
+}
+
+#nuevos-productos h2 {
+    font-size: 18px; /* Reduce el tamaño del título */
+    margin-bottom: 10px; /* Reduce el espacio inferior del título */
+}
+
+#nuevos-productos form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nuevos-productos label {
+    margin-bottom: 5px; /* Reduce el espacio inferior de las etiquetas */
+}
+
+#nuevos-productos input[type="email"] {
+    width: 200px; /* Reduce el ancho del campo de entrada */
+    margin-bottom: 10px; /* Reduce el espacio inferior del campo de entrada */
+}
+
+#nuevos-productos button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 8px 20px; /* Reduce el relleno del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nuevos-productos button:hover {
+    background-color: #d81b60;
+}
